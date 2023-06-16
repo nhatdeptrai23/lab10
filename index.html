@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />	
+	<meta name="description" content="Web development" />
+	<meta name="keywords"    content="Registration Form" />
+	<meta name="author"      content="put your name here" />
+	<link rel="stylesheet" href="./index.css"/>
+	<title>Web Development Registration Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+	<main>
+
+
+	<!-- Registration Form -->
+	<h1>Sign Up</h1>
+	<form id="form" method="post" action="">
+		<h2 class="user-infor">Account Information</h2>
+		<p class="account-input "><label>User ID</label>
+				<input id="user" type="email" name="uid" required />
+				<span id="sidTip">Student ID</span>
+				
+		</p>
+		<p class="account-input"><label>Password</label>
+				<input type="password" name="pwd1" id="password1" placeholder="At least 12 characters "  required/>
+				<div>
+					<button id="togglePassword">Show</button>
+					<button id="rulePassword">Rule</button>
+				</div>
+				<div id="popup">
+					(1) All input fields must not be empty;<br>
+					(2) User ID must contain at one ‘@’ symbol to be a valid email address;<br>
+					(3) Password and retype password must have the same value; and<br>
+					(4) Name must be letters and spaces only.<br>
+				</div>
+				<span id='message1'></span>
+		</p>
+		<p class="account-input">	<label>Retype Password</label>
+				<input id="password2" type="password" name="pwd2" required />
+				<span id='message'></span>
+		</p>
+		<h2 class="user-infor">User Information</h2>
+		<p>	<label>Name</label>
+				<input type="text" name="username" pattern="[A-Za-z ]*" required/>
+		</p>
+		<div class="radio-check">
+				<div class="check1">
+					<label>Male</label>
+					<input type="radio" name="gender" value="M" />
+				</div>
+				<div class="check2">
+					<label>Female</label>
+					<input type="radio" name="gender" value="F" />
+				</div>
+		</div>
+		<div class="sub-button"><input class="button-34" type="submit" value="Register" />
+		</div>
+	</form>
+</main>
+<script src="./index.js" ></script>
+</body>
+</html>
